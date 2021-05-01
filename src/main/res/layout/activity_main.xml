@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wall"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/fragment3"
+            android:name="com.example.contactapplication.top_freg"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            tools:layout="@layout/fragment_top_freg" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="369dp"
+            android:layout_height="51dp"
+            android:layout_margin="20dp"
+            android:shadowColor="@color/black"
+            android:shadowDx="@android:integer/config_longAnimTime"
+            android:shadowDy="@android:integer/config_longAnimTime"
+            android:shadowRadius="@android:integer/config_longAnimTime"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:textColorHighlight="#020101" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favourite Contacts"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.example.contactapplication.FavorFrag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            tools:layout="@layout/fragment_favor" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All Contacts"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.contactapplication.ListFrag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            tools:layout="@layout/fragment_list" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
